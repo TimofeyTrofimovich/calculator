@@ -127,11 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="arithmeticFunctions.cpp" />
     <ClCompile Include="calculator.cpp" />
-    <ClCompile Include="inputOutputFunctions.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="mathFunctions.cpp" />
+    <ClCompile Include="trigonometricFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inputOutputFunctions.h" />
+    <ClInclude Include="arithmeticFunctions.h" />
+    <ClInclude Include="Expression.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="mathFunctions.h" />
+    <ClInclude Include="trigonometricFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
