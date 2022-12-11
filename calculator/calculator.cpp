@@ -1,31 +1,38 @@
-﻿// calculator.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+#include "Calculator.h"
 
-/*#include <iostream>
-#include <string>
-#include "inputOutputFunctions.h"*/
+int getPriority(char ch) {
+    if (ch == '+' || ch == '-') {
+        return 1;
+    }
+    else if (ch == '*' || ch == '/' || ch == '%') {
+        return 2;
+    }
+    else if (ch == '^' || ch == 'q') {
+        return 3;
+    }
+    else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e') {
+        return 4;
+    }
+    else if (ch == '|') {
+        return 5;
+    }
+    else {
+        return 0;
+    }
+}
 
-
-#include <iostream>
-#include "Math.h"
-
-
-int getPriority(char);
-
-
-
-int main()
-{
-    Math obj();
-    std::cout << "Calculator\n";
-    std::cout << "Enter the expression: \n";
-    std::cout << "use these expressions:\nsin - sinus\ncos - cosinus\ntan - tangens\ncot  - cotangens\np - 3.14\nexp(n) - e^n\n";
+int Calculator::calculate() {
     double value;
     char ch;
     bool flag = true;
+    bool module = false;
     std::stack <Expression> numbers;
     std::stack <Expression> operations;
     Expression item;
+    std::cout << "Calculator\n";
+    std::cout << "Enter the expression: \n";
+    std::cout << "use these expressions:\nsin - sinus\ncos - cosinus\ntan - tangens\ncot  - cotangens\np - 3.14\nexp(n) - e^n\n";
+
 
     while (true) {
 
@@ -95,9 +102,34 @@ int main()
             std::cin.ignore();
             continue;
         }
+        else if (ch == '|') {
+            if (module == false) {
+                item.type = ch;
+                item.value = 0;
+                operations.push(item);
+                std::cin.ignore();
+                module = true;
+                continue;
+                
+            }
+            else {
+                while (operations.top().type != '|') {
+                    if (Math::math(numbers, operations, item) == false) {
+                        system("pause");
+                        return 0;
+                    }
+                }
+                numbers.top().value = absolute(numbers.top().value);
+                operations.pop();
+                std::cin.ignore();
+                module = false;
+
+                continue;
+            }
+        }
         else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e') {
             char arr[3];
-            for (int i=0; i < 3; i++) {
+            for (int i = 0; i < 3; i++) {
                 ch = std::cin.peek();
                 arr[i] = ch;
                 std::cin.ignore();
@@ -152,29 +184,4 @@ int main()
         }
     }
     std::cout << numbers.top().value << std::endl;
-    return 0;
 }
-
-
-
-
-int getPriority(char ch) {
-    if (ch == '+' || ch == '-') {
-        return 1;
-    }
-    else if (ch == '*' || ch == '/' || ch == '%') {
-        return 2;
-    }
-    else if (ch == '^' || ch == 'q') {
-        return 3;
-    }
-    else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e') {
-        return 4;
-    }
-    else {
-        return 0;
-    }
-}
-
-
-

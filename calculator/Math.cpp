@@ -71,6 +71,7 @@ bool Math::math(std::stack<Expression>& numbers, std::stack<Expression>& operati
         numbers.push(item);
         operations.pop();
         break;
+
     case 'q':
         if (num1 < 0) {
             std::cerr << "can't take square root from a negative number";

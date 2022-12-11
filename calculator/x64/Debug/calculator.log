@@ -1,12 +1,1 @@
-﻿  Math.cpp
-D:\calculator\calculator\Math.cpp(12,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(12,22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(22,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(22,22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(32,29): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(32,23): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(46,33): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(46,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(59,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(59,22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-  calculator.vcxproj -> D:\calculator\x64\Debug\calculator.exe
+﻿  calculator.vcxproj -> D:\calculator\x64\Debug\calculator.exe
