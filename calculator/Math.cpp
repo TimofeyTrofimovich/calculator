@@ -71,6 +71,13 @@ bool Math::math(std::stack<Expression>& numbers, std::stack<Expression>& operati
         numbers.push(item);
         operations.pop();
         break;
+    case '!':
+        result = factorial(num1);
+        item.type = '0';
+        item.value = result;
+        numbers.push(item);
+        operations.pop();
+        break;
 
     case 'q':
         if (num1 < 0) {

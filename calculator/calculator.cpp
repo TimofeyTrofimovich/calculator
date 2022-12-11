@@ -13,7 +13,7 @@ int getPriority(char ch) {
     else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e') {
         return 4;
     }
-    else if (ch == '|') {
+    else if (ch == '|' || ch == '!') {
         return 5;
     }
     else {
@@ -60,7 +60,7 @@ int Calculator::calculate() {
             std::cin.ignore();
             continue;
         }
-        else if ((ch == '+') || ((ch == '-') && (flag == 0)) || (ch == '*') || (ch == '/') || (ch == '^') || (ch == '%')) {     //for operations
+        else if ((ch == '+') || ((ch == '-') && (flag == 0)) || (ch == '*') || (ch == '/') || (ch == '^') || (ch == '%') || (ch == '!')) {     //for operations
             if (operations.empty()) {
                 item.type = ch;
                 item.value = 0;
