@@ -31,7 +31,7 @@ int Calculator::calculate() {
     Expression item;
     std::cout << "Calculator\n";
     std::cout << "Enter the expression: \n";
-    std::cout << "use these expressions:\nsin - sinus\ncos - cosinus\ntan - tangens\ncot  - cotangens\np - 3.14\nexp(n) - e^n\n";
+    std::cout << "use these expressions:\nsin - sine\ncos - cosine\ntan - tangent\ncot  - cotangent\np - 3.14\nexp(n) - e^n\n";
 
 
     while (true) {
