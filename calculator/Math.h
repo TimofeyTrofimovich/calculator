@@ -4,6 +4,8 @@
 #include "mathFunctions.h"
 #include "trigonometricFunctions.h"
 #include "Expression.h"
+#include "logicalFunctions.h"
+#include "bitwiseFunctions.h"
 #include <iostream>
 
 class Math {

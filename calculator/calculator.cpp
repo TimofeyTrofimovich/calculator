@@ -10,7 +10,9 @@ int getPriority(char ch) {
     else if (ch == '^' || ch == 'q') {
         return 3;
     }
-    else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e') {
+    else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e' || ch == 'A' || ch == 'L' || ch == 'M' 
+        || ch == 'N' || ch == 'O' || ch == 'P' || ch == 'Q' || ch == 'R' || ch == 'S' || ch == 'T'
+        || ch == 'U' || ch == 'V' || ch == 'W' || ch == 'X' || ch == 'Y' || ch == 'Z') {
         return 4;
     }
     else if (ch == '|' || ch == '!') {
@@ -30,10 +32,15 @@ int Calculator::calculate() {
     std::stack <Expression> operations;
     Expression item;
     std::cout << "Calculator\n";
+    std::cout << "use these expressions:\n" << "trigonometrical:\n"
+        "sin - sine \t \t cos - cosine\ntan - tangent \t \t " << "cot  - cotangent\np - 3.14\n\n" <<
+        "scientific:\n" << "exp(n) - e^n \t \t |n| - absolute value of n\n\n" << "logical:\n" <<
+        "NOT - negation \t \t \t AND - conjunction\nOR - disjunction \t \t XOR - exclusive disjunction\n" <<
+        "NAND - conjunction negation \t NOR - disjunction negation\n\n" << "bitwise:\n" <<
+        "BNOT - bitwise negation \t \t BAND - bitwise conjunction\nBOR - bitwise disjunction \t \t BXOR - bitwise exclusive disjunction\n" <<
+        "BNAN - bitwise conjuction negation \t BNOR - bitwise disjunction negation\nBLS-bitwise left shift \t \t \t " <<
+        "BRS - bitwise right shift\nBALS - bitwise arithmetic left shift \t BARS - bitwise arithmetic right shift\n\n";
     std::cout << "Enter the expression: \n";
-    std::cout << "use these expressions:\nsin - sine\ncos - cosine\ntan - tangent\ncot  - cotangent\np - 3.14\nexp(n) - e^n\n";
-
-
     while (true) {
 
         ch = std::cin.peek();       //check the next symbol but not read it
@@ -127,7 +134,21 @@ int Calculator::calculate() {
                 continue;
             }
         }
-        else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e') {
+        else if (ch == 'O') {
+            char arr[2];
+            for (size_t i = 0; i < 2; i++)
+            {
+                ch = std::cin.peek();
+                arr[i] = ch;
+                std::cin.ignore();
+            }
+            if (arr[0] == 'O' && arr[1] == 'R') {
+                item.type = 'O';
+                item.value = 0;
+                operations.push(item);
+            }
+        }
+        else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e' || ch == 'A' || ch == 'X' || ch == 'N' || ch == 'B') {
             char arr[3];
             for (int i = 0; i < 3; i++) {
                 ch = std::cin.peek();
@@ -167,6 +188,113 @@ int Calculator::calculate() {
                     operations.push(item);
                     continue;
                 }
+            }
+            else if (arr[0] = 'N' && arr[1] == 'O' && arr[2] == 'T') {
+                item.type = 'N';
+                item.value = 0;
+                operations.push(item);
+            }
+            else if (arr[0] = 'A' && arr[1] == 'N' && arr[2] == 'D') {
+                item.type = 'A';
+                item.value = 0;
+                operations.push(item);
+            }
+            else if (arr[0] = 'X' && arr[1] == 'O' && arr[2] == 'R') {
+                item.type = 'X';
+                item.value = 0;
+                operations.push(item);
+            }
+            else if (arr[0] = 'N' && arr[1] == 'O' && arr[2] == 'R') {
+                item.type = 'Y';
+                item.value = 0;
+                operations.push(item);
+            }
+            else if (arr[0] = 'N' && arr[1] == 'A' && arr[2] == 'N') {
+                ch = std::cin.peek();
+                std::cin.ignore();
+                if (ch == 'D') {
+                    item.type = 'Z';
+                    item.value = 0;
+                    operations.push(item);
+                }
+            }
+            else if (arr[0] = 'B' && arr[1] == 'N' && arr[2] == 'O') {
+                ch = std::cin.peek();
+                std::cin.ignore();
+                if (ch == 'T') {
+                    item.type = 'W';
+                    item.value = 0;
+                    operations.push(item);
+                }
+            }
+            else if (arr[0] = 'B' && arr[1] == 'A' && arr[2] == 'N') {
+                ch = std::cin.peek();
+                std::cin.ignore();
+                if (ch == 'D') {
+                    item.type = 'V';
+                    item.value = 0;
+                    operations.push(item);
+                }
+            }
+            else if (arr[0] = 'B' && arr[1] == 'O' && arr[2] == 'R') {
+                    item.type = 'U';
+                    item.value = 0;
+                    operations.push(item);
+            }
+            else if (arr[0] = 'B' && arr[1] == 'X' && arr[2] == 'O') {
+                ch = std::cin.peek();
+                std::cin.ignore();
+                if (ch == 'R') {
+                    item.type = 'T';
+                    item.value = 0;
+                    operations.push(item);
+                }
+            }
+            else if (arr[0] = 'B' && arr[1] == 'N' && arr[2] == 'A') {
+                ch = std::cin.peek();
+                std::cin.ignore();
+                if (ch == 'N') {
+                    item.type = 'S';
+                    item.value = 0;
+                    operations.push(item);
+                }
+            }
+            else if (arr[0] = 'B' && arr[1] == 'N' && arr[2] == 'O') {
+                ch = std::cin.peek();
+                std::cin.ignore();
+                if (ch == 'R') {
+                    item.type = 'R';
+                    item.value = 0;
+                    operations.push(item);
+                }
+            }
+            else if (arr[0] = 'B' && arr[1] == 'L' && arr[2] == 'S') {
+                item.type = 'Q';
+                item.value = 0;
+                operations.push(item);
+            }
+            else if (arr[0] = 'B' && arr[1] == 'R' && arr[2] == 'S') {
+                item.type = 'P';
+                item.value = 0;
+                operations.push(item);
+            }
+            else if (arr[0] = 'B' && arr[1] == 'A' && arr[2] == 'L') {
+            ch = std::cin.peek();
+            std::cin.ignore();
+            if (ch == 'S') {
+                item.type = 'M';
+                item.value = 0;
+                operations.push(item);
+            }
+            }
+            else if (arr[0] = 'B' && arr[1] == 'A' && arr[2] == 'R') {
+            ch = std::cin.peek();
+            std::cin.ignore();
+            if (ch == 'S') {
+                item.type = 'L';
+                item.value = 0;
+                operations.push(item);
+            }
             }
         }
 

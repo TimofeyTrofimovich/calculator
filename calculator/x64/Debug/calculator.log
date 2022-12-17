@@ -1,20 +1,4 @@
 ﻿  Calculator.cpp
-D:\calculator\calculator\Calculator.cpp(122,61): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-  Main.cpp
-  Math.cpp
-D:\calculator\calculator\Math.cpp(12,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(12,22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(22,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(22,22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(32,29): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(32,23): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(46,33): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(46,27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(59,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(59,22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-D:\calculator\calculator\Math.cpp(75,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-  mathFunctions.cpp
-D:\calculator\calculator\mathFunctions.cpp(16,8): warning C4267: *=: преобразование из "size_t" в "int"; возможна потеря данных
-  Создание кода...
-D:\calculator\calculator\Calculator.cpp(187): warning C4715: Calculator::calculate: значение возвращается не при всех путях выполнения
-  calculator.vcxproj -> D:\calculator\x64\Debug\calculator.exe
+C:\Users\User\Desktop\My projects\calculator\calculator\Calculator.cpp(129,61): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\Desktop\My projects\calculator\calculator\Calculator.cpp(315): warning C4715: Calculator::calculate: значение возвращается не при всех путях выполнения
+  calculator.vcxproj -> C:\Users\User\Desktop\My projects\calculator\x64\Debug\calculator.exe

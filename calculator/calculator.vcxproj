@@ -132,12 +132,16 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="mathFunctions.cpp" />
+    <ClCompile Include="logicalFunctions.cpp" />
+    <ClCompile Include="bitwiseFunctions.cpp" />
     <ClCompile Include="trigonometricFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arithmeticFunctions.h" />
     <ClInclude Include="Calculator.h" />
     <ClInclude Include="Expression.h" />
+    <ClInclude Include="bitwiseFunctions.h" />
+    <ClInclude Include="logicalFunctions.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="mathFunctions.h" />
     <ClInclude Include="trigonometricFunctions.h" />
