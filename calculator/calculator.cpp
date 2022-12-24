@@ -61,7 +61,7 @@ int Calculator::calculate() {
         }
         else if (ch == 'p') {
             item.type = '0';
-            item.value = PI;
+            item.value = 3.14159;
             numbers.push(item);
             flag = false;
             std::cin.ignore();
