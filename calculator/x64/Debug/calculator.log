@@ -1,2 +1,4 @@
-﻿  trigonometricFunctions.cpp
+﻿  Calculator.cpp
+C:\Users\User\Desktop\My projects\calculator\calculator\Calculator.cpp(129,61): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\Desktop\My projects\calculator\calculator\Calculator.cpp(329): warning C4715: Calculator::calculate: значение возвращается не при всех путях выполнения
   calculator.vcxproj -> C:\Users\User\Desktop\My projects\calculator\x64\Debug\calculator.exe

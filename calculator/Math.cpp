@@ -133,6 +133,20 @@ bool Math::math(std::stack<Expression>& numbers, std::stack<Expression>& operati
         numbers.push(item);
         operations.pop();
         break;
+    case 'l':
+        result = log_e(num1);
+        item.type = '0';
+        item.value = result;
+        numbers.push(item);
+        operations.pop();
+        break;
+    case 'm':
+        result = log_10(num1);
+        item.type = '0';
+        item.value = result;
+        numbers.push(item);
+        operations.pop();
+        break;
     case 'N':
         result = negation(num1);
         item.type = '0';

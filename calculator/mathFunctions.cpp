@@ -1,11 +1,27 @@
 #include "mathFunctions.h"
-double sqrt_(double a) {
-	return sqrt(a);
+
+int pow(int number, int power) {
+	for (size_t i = 0; i < power; i++)
+		number *= number;
+		return number;
+}
+
+double sqrt_(double number) {
+	double t;
+	double squareRoot = number / 2;
+	do {
+		t = squareRoot;
+		squareRoot = (t + (number / t)) / 2;
+	} while ((t - squareRoot) != 0);
+	return squareRoot;
 }
 
 int absolute(int a)
 {
-	return abs(a);
+	if (a >= 0)
+		return abs(a);
+	else
+		return -a;
 }
 
 int factorial(int a)
@@ -25,10 +41,10 @@ double log_e(int a)
 
 double log_10(int a)
 {
-	return log10(a);
+	return log_e(a)/log_e(10);
 }
 
 double log(int a, int b)
 {
-	return (log(a) / log(b));
+	return (log_e(a) / log_e(b));
 }

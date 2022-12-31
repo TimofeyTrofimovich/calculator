@@ -10,7 +10,7 @@ int getPriority(char ch) {
     else if (ch == '^' || ch == 'q') {
         return 3;
     }
-    else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e' || ch == 'A' || ch == 'L' || ch == 'M' 
+    else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e' || ch =='l' || ch=='m' || ch == 'A' || ch == 'L' || ch == 'M'
         || ch == 'N' || ch == 'O' || ch == 'P' || ch == 'Q' || ch == 'R' || ch == 'S' || ch == 'T'
         || ch == 'U' || ch == 'V' || ch == 'W' || ch == 'X' || ch == 'Y' || ch == 'Z') {
         return 4;
@@ -34,7 +34,7 @@ int Calculator::calculate() {
     std::cout << "Calculator\n";
     std::cout << "use these expressions:\n" << "trigonometrical:\n"
         "sin - sine \t \t cos - cosine\ntan - tangent \t \t " << "cot  - cotangent\np - 3.14\n\n" <<
-        "scientific:\n" << "exp(n) - e^n \t \t |n| - absolute value of n\n\n" << "logical:\n" <<
+        "scientific:\n" << "exp(n) - e^n \t \t |n| - absolute value of n\nloge - natural logarithm \t logt - common logarithm\n\n" << "logical:\n" <<
         "NOT - negation \t \t \t AND - conjunction\nOR - disjunction \t \t XOR - exclusive disjunction\n" <<
         "NAND - conjunction negation \t NOR - disjunction negation\n\n" << "bitwise:\n" <<
         "BNOT - bitwise negation \t \t BAND - bitwise conjunction\nBOR - bitwise disjunction \t \t BXOR - bitwise exclusive disjunction\n" <<
@@ -148,7 +148,7 @@ int Calculator::calculate() {
                 operations.push(item);
             }
         }
-        else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e' || ch == 'A' || ch == 'X' || ch == 'N' || ch == 'B') {
+        else if (ch == 's' || ch == 'c' || ch == 't' || ch == 'e' || ch == 'A' || ch == 'X' || ch == 'N' || ch == 'B' || ch == 'l') {
             char arr[3];
             for (int i = 0; i < 3; i++) {
                 ch = std::cin.peek();
@@ -187,6 +187,20 @@ int Calculator::calculate() {
                     item.value = 0;
                     operations.push(item);
                     continue;
+                }
+            }
+            else if (arr[0] = 'l' && arr[1] == 'o' && arr[2] == 'g') {
+                ch = std::cin.peek();
+                std::cin.ignore();
+                if (ch == 'e') {
+                    item.type = 'l';
+                    item.value = 0;
+                    operations.push(item);
+                }
+                if (ch == 't') {
+                    item.type = 'm';
+                    item.value = 0;
+                    operations.push(item);
                 }
             }
             else if (arr[0] = 'N' && arr[1] == 'O' && arr[2] == 'T') {
